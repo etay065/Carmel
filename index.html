@@ -1,0 +1,695 @@
+
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+<meta charset="utf-8">
+<style>
+    @page {
+        size: A4 portrait;
+        margin: 12mm;
+        background-color: #ffffff;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #1e293b;
+    }
+    h1 {
+        text-align: center;
+        color: #1e3a8a;
+        margin-bottom: 4px;
+        font-size: 20pt;
+    }
+    p.subtitle {
+        text-align: center;
+        color: #64748b;
+        font-size: 11pt;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+    .instructions {
+        background-color: #eff6ff;
+        border: 1px solid #bfdbfe;
+        border-radius: 8px;
+        padding: 10px 15px;
+        font-size: 10pt;
+        color: #1e40af;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .stats-bar {
+        display: table;
+        width: 100%;
+        background-color: #f1f5f9;
+        border-radius: 8px;
+        padding: 8px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    .stat-item {
+        display: table-cell;
+        font-size: 10pt;
+        font-weight: bold;
+        color: #334155;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 5px;
+    }
+    th {
+        background-color: #1e3a8a;
+        color: #ffffff;
+        font-size: 10.5pt;
+        padding: 8px 8px;
+        text-align: right;
+        border: 1px solid #1e3a8a;
+    }
+    td {
+        padding: 6px 8px;
+        font-size: 10pt;
+        border: 1px solid #cbd5e1;
+        vertical-align: middle;
+    }
+    tr:nth-child(even) {
+        background-color: #f8fafc;
+    }
+    .checkbox-col {
+        width: 45px;
+        text-align: center;
+    }
+    /* Interactive PDF checkbox style */
+    input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        cursor: pointer;
+    }
+    .num-col {
+        width: 30px;
+        text-align: center;
+        font-weight: bold;
+        color: #64748b;
+    }
+    .badge {
+        display: inline-block;
+        padding: 2px 7px;
+        border-radius: 10px;
+        font-size: 8.5pt;
+        font-weight: bold;
+    }
+    .b-pension { background-color: #e2e8f0; color: #334155; }
+    .b-adult { background-color: #e9d5ff; color: #6b21a8; }
+    .b-kids { background-color: #bfdbfe; color: #1e40af; }
+    .b-orange { background-color: #fed7aa; color: #9a3412; }
+    .b-green { background-color: #bbf7d0; color: #166534; }
+</style>
+</head>
+<body>
+
+<h1>דף אישור הגעה וצ'ק-אין (דיגיטלי)</h1>
+<p class="subtitle">אירוע משפחתי וחברים • 55 מושבים / אורחים</p>
+
+<div class="instructions">
+    💻 <strong>טיפ למשתמשי MacBook:</strong> ניתן לפתוח קובץ PDF זה בתוכנת <strong>Preview (תצוגה מקדימה)</strong> המובנית ב-Mac, וללחוץ בלחיצת עכבר/טאצ'פאד על תיבות הסימון כדי לסמן V דיגיטלי בזמן אמת!
+</div>
+
+<div class="stats-bar">
+    <div class="stat-item">מבוגרים: 26</div>
+    <div class="stat-item">ילדים (מעל 8): 15</div>
+    <div class="stat-item">גילאי 3-8: 7</div>
+    <div class="stat-item">מתחת לגיל 3: 4</div>
+    <div class="stat-item">פנסיונרים: 3</div>
+    <div class="stat-item">סה"כ: 55 מוזמנים</div>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th class="checkbox-col">הגיע</th>
+            <th class="num-col">#</th>
+            <th>שם המוזמן/ת</th>
+            <th>קבוצת גיל / סיווג</th>
+            <th>ארוחת בוקר</th>
+            <th>ארוחת צהריים</th>
+            <th>כניסה לאתר</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_1" name="guest_1"></td>
+            <td class="num-col">1</td>
+            <td style="font-weight: bold;">שמעון</td>
+            <td><span class="badge b-pension">פנסיונרים</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תעריף פנסיונר</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_2" name="guest_2"></td>
+            <td class="num-col">2</td>
+            <td style="font-weight: bold;">שולה</td>
+            <td><span class="badge b-pension">פנסיונרים</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תעריף פנסיונר</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_3" name="guest_3"></td>
+            <td class="num-col">3</td>
+            <td style="font-weight: bold;">משה מנצור</td>
+            <td><span class="badge b-pension">פנסיונרים</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תעריף פנסיונר</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_4" name="guest_4"></td>
+            <td class="num-col">4</td>
+            <td style="font-weight: bold;">איתי</td>
+            <td><span class="badge b-adult">מבוגרים</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_5" name="guest_5"></td>
+            <td class="num-col">5</td>
+            <td style="font-weight: bold;">שני</td>
+            <td><span class="badge b-adult">מבוגרים</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_6" name="guest_6"></td>
+            <td class="num-col">6</td>
+            <td style="font-weight: bold;">אסף</td>
+            <td><span class="badge b-adult">מבוגרים</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_7" name="guest_7"></td>
+            <td class="num-col">7</td>
+            <td style="font-weight: bold;">יעל</td>
+            <td><span class="badge b-adult">מבוגרים</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_8" name="guest_8"></td>
+            <td class="num-col">8</td>
+            <td style="font-weight: bold;">שחר</td>
+            <td><span class="badge b-adult">מבוגרים</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_9" name="guest_9"></td>
+            <td class="num-col">9</td>
+            <td style="font-weight: bold;">אפרת</td>
+            <td><span class="badge b-adult">מבוגרים</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_10" name="guest_10"></td>
+            <td class="num-col">10</td>
+            <td style="font-weight: bold;">סיון</td>
+            <td><span class="badge b-adult">מבוגרים</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_11" name="guest_11"></td>
+            <td class="num-col">11</td>
+            <td style="font-weight: bold;">נתי</td>
+            <td><span class="badge b-adult">מבוגרים</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_12" name="guest_12"></td>
+            <td class="num-col">12</td>
+            <td style="font-weight: bold;">הדס</td>
+            <td><span class="badge b-adult">מבוגרים</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_13" name="guest_13"></td>
+            <td class="num-col">13</td>
+            <td style="font-weight: bold;">משה שוקרון</td>
+            <td><span class="badge b-adult">מבוגרים</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_14" name="guest_14"></td>
+            <td class="num-col">14</td>
+            <td style="font-weight: bold;">צור</td>
+            <td><span class="badge b-adult">מבוגרים</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_15" name="guest_15"></td>
+            <td class="num-col">15</td>
+            <td style="font-weight: bold;">תמר</td>
+            <td><span class="badge b-adult">מבוגרים</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_16" name="guest_16"></td>
+            <td class="num-col">16</td>
+            <td style="font-weight: bold;">פנינה</td>
+            <td><span class="badge b-adult">מבוגרים</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_17" name="guest_17"></td>
+            <td class="num-col">17</td>
+            <td style="font-weight: bold;">ארז</td>
+            <td><span class="badge b-adult">מבוגרים</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_18" name="guest_18"></td>
+            <td class="num-col">18</td>
+            <td style="font-weight: bold;">חגית</td>
+            <td><span class="badge b-adult">מבוגרים</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_19" name="guest_19"></td>
+            <td class="num-col">19</td>
+            <td style="font-weight: bold;">נטע</td>
+            <td><span class="badge b-adult">מבוגרים</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_20" name="guest_20"></td>
+            <td class="num-col">20</td>
+            <td style="font-weight: bold;">חובב</td>
+            <td><span class="badge b-adult">מבוגרים</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_21" name="guest_21"></td>
+            <td class="num-col">21</td>
+            <td style="font-weight: bold;">דודי</td>
+            <td><span class="badge b-adult">מבוגרים</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_22" name="guest_22"></td>
+            <td class="num-col">22</td>
+            <td style="font-weight: bold;">שירה</td>
+            <td><span class="badge b-adult">מבוגרים</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_23" name="guest_23"></td>
+            <td class="num-col">23</td>
+            <td style="font-weight: bold;">נדין</td>
+            <td><span class="badge b-adult">מבוגרים</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_24" name="guest_24"></td>
+            <td class="num-col">24</td>
+            <td style="font-weight: bold;">ליאור</td>
+            <td><span class="badge b-adult">מבוגרים</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_25" name="guest_25"></td>
+            <td class="num-col">25</td>
+            <td style="font-weight: bold;">ענבל</td>
+            <td><span class="badge b-adult">מבוגרים</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_26" name="guest_26"></td>
+            <td class="num-col">26</td>
+            <td style="font-weight: bold;">תומר</td>
+            <td><span class="badge b-adult">מבוגרים</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_27" name="guest_27"></td>
+            <td class="num-col">27</td>
+            <td style="font-weight: bold;">טליה</td>
+            <td><span class="badge b-adult">מבוגרים</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_28" name="guest_28"></td>
+            <td class="num-col">28</td>
+            <td style="font-weight: bold;">לירון</td>
+            <td><span class="badge b-adult">מבוגרים</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_29" name="guest_29"></td>
+            <td class="num-col">29</td>
+            <td style="font-weight: bold;">אורטל</td>
+            <td><span class="badge b-adult">מבוגרים</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_30" name="guest_30"></td>
+            <td class="num-col">30</td>
+            <td style="font-weight: bold;">כרמל</td>
+            <td><span class="badge b-kids">ילדים (מעל 8)</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_31" name="guest_31"></td>
+            <td class="num-col">31</td>
+            <td style="font-weight: bold;">גפן</td>
+            <td><span class="badge b-kids">ילדים (מעל 8)</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_32" name="guest_32"></td>
+            <td class="num-col">32</td>
+            <td style="font-weight: bold;">הראל</td>
+            <td><span class="badge b-kids">ילדים (מעל 8)</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_33" name="guest_33"></td>
+            <td class="num-col">33</td>
+            <td style="font-weight: bold;">שלו (12)</td>
+            <td><span class="badge b-kids">ילדים (מעל 8)</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_34" name="guest_34"></td>
+            <td class="num-col">34</td>
+            <td style="font-weight: bold;">שליו (12)</td>
+            <td><span class="badge b-kids">ילדים (מעל 8)</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_35" name="guest_35"></td>
+            <td class="num-col">35</td>
+            <td style="font-weight: bold;">הדר</td>
+            <td><span class="badge b-kids">ילדים (מעל 8)</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_36" name="guest_36"></td>
+            <td class="num-col">36</td>
+            <td style="font-weight: bold;">ענבל</td>
+            <td><span class="badge b-kids">ילדים (מעל 8)</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_37" name="guest_37"></td>
+            <td class="num-col">37</td>
+            <td style="font-weight: bold;">לביא</td>
+            <td><span class="badge b-kids">ילדים (מעל 8)</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_38" name="guest_38"></td>
+            <td class="num-col">38</td>
+            <td style="font-weight: bold;">יאיר</td>
+            <td><span class="badge b-kids">ילדים (מעל 8)</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_39" name="guest_39"></td>
+            <td class="num-col">39</td>
+            <td style="font-weight: bold;">נועה (14)</td>
+            <td><span class="badge b-kids">ילדים (מעל 8)</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_40" name="guest_40"></td>
+            <td class="num-col">40</td>
+            <td style="font-weight: bold;">יאיר צדוק</td>
+            <td><span class="badge b-kids">ילדים (מעל 8)</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_41" name="guest_41"></td>
+            <td class="num-col">41</td>
+            <td style="font-weight: bold;">אופיר</td>
+            <td><span class="badge b-kids">ילדים (מעל 8)</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_42" name="guest_42"></td>
+            <td class="num-col">42</td>
+            <td style="font-weight: bold;">רועי</td>
+            <td><span class="badge b-kids">ילדים (מעל 8)</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_43" name="guest_43"></td>
+            <td class="num-col">43</td>
+            <td style="font-weight: bold;">ליה</td>
+            <td><span class="badge b-kids">ילדים (מעל 8)</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_44" name="guest_44"></td>
+            <td class="num-col">44</td>
+            <td style="font-weight: bold;">אריאל</td>
+            <td><span class="badge b-kids">ילדים (מעל 8)</span></td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_45" name="guest_45"></td>
+            <td class="num-col">45</td>
+            <td style="font-weight: bold;">אביב</td>
+            <td><span class="badge b-orange">גילאי 3-8 (כתום)</span></td>
+            <td>תשלום מלא</td>
+            <td>15% הנחה</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_46" name="guest_46"></td>
+            <td class="num-col">46</td>
+            <td style="font-weight: bold;">רוני</td>
+            <td><span class="badge b-orange">גילאי 3-8 (כתום)</span></td>
+            <td>תשלום מלא</td>
+            <td>15% הנחה</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_47" name="guest_47"></td>
+            <td class="num-col">47</td>
+            <td style="font-weight: bold;">נדב</td>
+            <td><span class="badge b-orange">גילאי 3-8 (כתום)</span></td>
+            <td>תשלום מלא</td>
+            <td>15% הנחה</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_48" name="guest_48"></td>
+            <td class="num-col">48</td>
+            <td style="font-weight: bold;">טל</td>
+            <td><span class="badge b-orange">גילאי 3-8 (כתום)</span></td>
+            <td>תשלום מלא</td>
+            <td>15% הנחה</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_49" name="guest_49"></td>
+            <td class="num-col">49</td>
+            <td style="font-weight: bold;">אליה (5.5)</td>
+            <td><span class="badge b-orange">גילאי 3-8 (כתום)</span></td>
+            <td>תשלום מלא</td>
+            <td>15% הנחה</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_50" name="guest_50"></td>
+            <td class="num-col">50</td>
+            <td style="font-weight: bold;">נווה</td>
+            <td><span class="badge b-orange">גילאי 3-8 (כתום)</span></td>
+            <td>תשלום מלא</td>
+            <td>15% הנחה</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_51" name="guest_51"></td>
+            <td class="num-col">51</td>
+            <td style="font-weight: bold;">טליה</td>
+            <td><span class="badge b-orange">גילאי 3-8 (כתום)</span></td>
+            <td>תשלום מלא</td>
+            <td>15% הנחה</td>
+            <td>תשלום מלא</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_52" name="guest_52"></td>
+            <td class="num-col">52</td>
+            <td style="font-weight: bold;">נועם</td>
+            <td><span class="badge b-green">מתחת לגיל 3 (ירוק)</span></td>
+            <td>חינם</td>
+            <td>חינם</td>
+            <td>חינם</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_53" name="guest_53"></td>
+            <td class="num-col">53</td>
+            <td style="font-weight: bold;">מעיין</td>
+            <td><span class="badge b-green">מתחת לגיל 3 (ירוק)</span></td>
+            <td>חינם</td>
+            <td>חינם</td>
+            <td>חינם</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_54" name="guest_54"></td>
+            <td class="num-col">54</td>
+            <td style="font-weight: bold;">איתן</td>
+            <td><span class="badge b-green">מתחת לגיל 3 (ירוק)</span></td>
+            <td>חינם</td>
+            <td>חינם</td>
+            <td>חינם</td>
+        </tr>
+    
+        <tr>
+            <td class="checkbox-col"><input type="checkbox" id="c_55" name="guest_55"></td>
+            <td class="num-col">55</td>
+            <td style="font-weight: bold;">עידו</td>
+            <td><span class="badge b-green">מתחת לגיל 3 (ירוק)</span></td>
+            <td>חינם</td>
+            <td>חינם</td>
+            <td>חינם</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+</body>
+</html>
